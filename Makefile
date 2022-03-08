@@ -31,11 +31,11 @@ include $(DEVKITARM)/3ds_rules
 #     - icon.png
 #     - <libctru folder>/default_icon.png
 #---------------------------------------------------------------------------------
-TARGET		:=	$(notdir $(CURDIR))
+TARGET		:=	conway3ds
 BUILD		:=	build
-SOURCES		:=	source
+SOURCES		:=	source source/components
 DATA		:=	data
-INCLUDES	:=	include
+INCLUDES	:=	include $(DEVKITARM)/arm-none-eabi/include/
 GRAPHICS	:=	gfx
 GFXBUILD	:=	$(BUILD)
 APP_TITLE	:=	Conway 3DS
@@ -168,6 +168,7 @@ all: $(BUILD) $(GFXBUILD) $(DEPSDIR) $(ROMFS_T3XFILES) $(T3XHFILES)
 	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
 
 $(BUILD):
+	@echo $(CURDIR)
 	@mkdir -p $@
 
 ifneq ($(GFXBUILD),$(BUILD))
