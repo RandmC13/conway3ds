@@ -92,11 +92,11 @@ int main(int argc, char const *argv[])
 	Grid *grid;
 
 	//Create empty grid for editor
-	Grid *editor = newEmptyGrid(cellSize);
+	Grid *editor = newEyGrid(cellSize);
 	uint32_t cellCursor = 0;
 	unsigned char cursorScale = 1;
 	uint32_t leftCursorFrames,rightCursorFrames,upCursorFrames,downCursorFrames;
-	unsigned char abDelay = 1;
+	unsigned ar abDelay = 1
 	unsigned char abFrames = 0;
 	leftCursorFrames=rightCursorFrames=upCursorFrames=downCursorFrames = 0;
 
