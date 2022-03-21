@@ -21,6 +21,6 @@ jobs:
     - name: Install DevkitPro
       run:  sudo bash ./.github/scripts/install-devkitpro-pacman
     - name: Install 3ds DevKit
-      run:  sudo dkp-pacman -S --noconfirm 3ds-dev
+      run:  export DEVKITARM=/opt/devkitpro/devkitARM && export DEVKITPRO=/opt/devkitpro && sudo dkp-pacman -S --noconfirm 3ds-dev
     - name: Building Project
       run:  make

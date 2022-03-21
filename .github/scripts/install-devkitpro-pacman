@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-export DEVKITPRO=/opt/devkitpro
-export DEVKITARM=/opt/devkitpro/devkitARM
-
 export TZ=Europe/London
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
