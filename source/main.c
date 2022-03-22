@@ -21,7 +21,7 @@ void gameTextInit();
 void gameTextDeInit();
 
 //Create text objects for menu
-C2D_TextBuf menuBuffer;
+D_TextBuf menuBuffer;
 C2D_Text menuText[3];
 //Selection box time period for menu
 uint16_t selectionTimePeriod = 150;
@@ -29,10 +29,10 @@ uint16_t selectionTimePeriod = 150;
 //Create text objects for game
 C2D_TextBuf gameBuffer;
 C2D_Text gameText[1];
-float pausetextWidth, pausetextHeight, pausetextPadding, pausetextX, pausetextY;
+oat pausetextWidth, pausetextHeight, pausetextPadding, pausetextX, pausetextY;
 
-int main(int argc, char const *argv[])
-{
+t main(int argc, char const *argv[])
+
 
 	//Init libs
 	gfxInitDefault();
