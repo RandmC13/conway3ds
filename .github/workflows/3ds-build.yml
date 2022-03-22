@@ -7,24 +7,14 @@ on:
     branches: [ master, development ]
   workflow_dispatch:
 
-env:
-  DEVKITPRO:  /opt/devkitpro
-  DEVKITARM:  /opt/devkitpro/devkitARM
-
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
+    container:
+      image:  devkitpro/devkitarm:latest
     steps:
-    - uses: actions/checkout@v3 #Checkout dev branch
-      with:
-        ref:  development
-    - name: Install wget and git
-      run: sudo apt-get -y update && sudo apt-get -y install wget git
-    - name: Install DevkitPro
-      run:  sudo bash ./.github/scripts/install-devkitpro-pacman
-    - name: Install 3ds DevKit
-      run:  sudo dkp-pacman -S --noconfirm 3ds-dev
-    - name: Building Project
+    - uses: actions/checkout@v3
+    - name: Build Project
       run:  make
