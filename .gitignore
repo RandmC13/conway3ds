@@ -1,3 +1,4 @@
 .vscode/
 .scripts/
 .github/workflows/create-release.yml
+./dockerbuild.sh
