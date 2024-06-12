@@ -88,6 +88,7 @@ int main(int argc, char const *argv[])
 	//Create Empty Grid for titlescreen
 	Grid *titlescreen = newEmptyGrid(4.0f);
 
+
 	//Create empty grid pointer for game
 	Grid *grid;
 
